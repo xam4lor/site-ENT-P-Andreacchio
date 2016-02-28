@@ -72,7 +72,7 @@
 							$text = $_POST['text'];
 
 							try {
-								$bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u660192439_syxam;charset=utf8', 'u660192439_xam', 'fripouille57', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+								$bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u534058177_syxam;charset=utf8', 'u534058177_xam', 'syxam_hartania', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 							}
 							catch(Exception $e) {
 								die('Erreur : ' . $e->getMessage());
