@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset = "utf-8"/>
+		<link rel="icon" type="image/png" href="resources/favicon.png" />
 		<link rel = "stylesheet" href = "../css/coordonnees.css" />
 		<title>ENT Pierre Andreacchio</title>
 	</head>
