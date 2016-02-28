@@ -5,6 +5,11 @@
 	background-color: silver;
 }
 
+*:hover
+{
+    cursor: url('../resources/cursor.cur'), pointer;
+}
+
 
 /*HEADER*/
 
