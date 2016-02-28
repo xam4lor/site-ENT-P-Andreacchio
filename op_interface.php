@@ -146,11 +146,13 @@
 						}
 						else {
 							$req = $bdd->query('SELECT id, date_post, nom, prenom, email, numero_tel, text FROM mails ORDER BY id');
+							$nb = 0;
 							?>
 						<div class="mails">
-							<h1>Liste des mails : (il se peut qu'il ni en ait pas)</h1><br />
+							<h1>Liste des mails :</h1><br />
 							<?php
 							while($donnees = $req->fetch()) {
+								$nb++;
 								?>
 							<h3>
 								- <?php echo $donnees['prenom'] ?> 
@@ -166,6 +168,14 @@
 							}
 
 							$req->closeCursor();
+							
+							if($nb <= 0) {
+								?>
+							<h3>
+								- Vous n'avez pas de mails -
+							</h3>
+								<?php
+							}
 							?>
 						</div>
 							<?php
