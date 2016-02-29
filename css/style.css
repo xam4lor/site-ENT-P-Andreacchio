@@ -187,3 +187,16 @@ footer
 	margin-right: -50px;
 }
 
+.raccourci_footer
+{
+	margin-left: 70px;
+	font-size: 11pt;
+	font-family: Georgia;
+	color: silver;
+	position: relative;
+	width: 80px;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
+}
+
