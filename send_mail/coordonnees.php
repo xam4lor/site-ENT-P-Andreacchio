@@ -83,9 +83,21 @@
 							$inser->execute(array('nom' => $name, 'prenom' => $prename, 'email' => $email, 'numero_tel' => $tel, 'text' => $text));
 
 							$to = 'xam4lor@gmail.com';
-							$subject = 'Nouveau mail sur le site http://www.ent-andreacchio.890m.com/ !!!';
-							$message = 'Nom : ' . $name . "\r\n" . ', prénom : ' . $prename . "\r\n" . ', email : ' . $email . "\r\n" . ', tel : ' . $tel . "\r\n" . ', texte : ' . $text . '.';
-							$headers = 'From: xam4lor@gmail.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+							$subject = 'Nouveau mail sur le site http://www.ent-andreacchio.890m.com !';
+							$message = '-- Nouveau mail depuis le site \'http://www.ent-andreacchio.890m.com\' --' . "\r\n"
+								. "\r\n"
+								. 'Description du mail : ' . "\r\n"
+								. 'Nom de l\'envoyeur : ' . $name . "\r\n"
+								. 'Prénom : ' . $prename . "\r\n"
+								. 'E-mail : ' . $email . "\r\n"
+								. 'Numéro du téléphone : 0' . $tel . "\r\n" 
+								. 'Texte : ' . $text . "\r\n"
+								. "\r\n"
+								. "\r\n"
+								. "\r\n"
+								. '                - Système de mails par xam4lor (xam4lor@gmail.com)'
+							;
+							$headers = 'From: mail@ent-andreacchio.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 							mail($to, $subject, $message, $headers);
 
 							header('Location: envoye.html');
