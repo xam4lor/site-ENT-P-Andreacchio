@@ -39,6 +39,12 @@ header
     height: 60px;
 }
 
+#logo img:hover
+{
+    width: 160px;
+    height: 110px;
+}
+
 header
 {
 	border-bottom: solid #000 2px;
@@ -97,6 +103,7 @@ nav a
 nav a:hover
 {
     border-bottom: 3px solid #760001;
+    font-size: 18pt;
 }
 
 
