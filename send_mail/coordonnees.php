@@ -82,6 +82,24 @@
 							$inser = $bdd->prepare('INSERT INTO mails(date_post, nom, prenom, email, numero_tel, text) VALUES(NOW(), :nom, :prenom, :email, :numero_tel, :text)');
 							$inser->execute(array('nom' => $name, 'prenom' => $prename, 'email' => $email, 'numero_tel' => $tel, 'text' => $text));
 
+							$to = 'xam4lor@gmail.com';
+							$subject = 'Nouveau mail sur le site http://www.ent-andreacchio.890m.com !';
+							$message = '-- Nouveau mail depuis le site \'http://www.ent-andreacchio.890m.com\' --' . "\r\n"
+								. "\r\n"
+								. 'Description du mail : ' . "\r\n"
+								. 'Nom de l\'envoyeur : ' . $name . "\r\n"
+								. 'Prénom : ' . $prename . "\r\n"
+								. 'E-mail : ' . $email . "\r\n"
+								. 'Numéro du téléphone : 0' . $tel . "\r\n" 
+								. 'Texte : ' . $text . "\r\n"
+								. "\r\n"
+								. "\r\n"
+								. "\r\n"
+								. '                - Système de mails par xam4lor (xam4lor@gmail.com)'
+							;
+							$headers = 'From: mail@ent-andreacchio.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+							mail($to, $subject, $message, $headers);
+
 							header('Location: envoye.html');
 						}
 					?>
