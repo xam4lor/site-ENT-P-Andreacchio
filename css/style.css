@@ -162,12 +162,13 @@ nav a:hover
 .marge_verticale
 {
 	margin-top: -180px;
-	margin-bottom: -10px;
+	margin-bottom: -20px;
 }
 
 .marge_horizontale
 {
 	margin-bottom: -150px;
+	border-top: 3px solid black;
 }
 
 
@@ -189,14 +190,43 @@ footer
 
 .raccourci_footer
 {
-	margin-left: 70px;
+	margin-left: 40px;
 	font-size: 11pt;
 	font-family: Georgia;
 	color: silver;
 	position: relative;
+	width: 18px;
+	border-left: 3px double black;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	padding: 5px 5px 5px 5px;
+	background-color: RGB(127, 127, 127);
+}
+
+.raccourci_footer:hover
+{
 	width: 80px;
-	border: 2px solid black;
-	border-radius: 10px;
-	padding: 10px 10px 10px 10px;
+	border-left: 3px double red;
+}
+
+.remonter_en_haut
+{
+	width: 18px;
+	position: relative;
+	font-size: 11pt;
+	color: silver;
+	margin-left: 40px;
+	margin-bottom: -55px;
+	border-left: 3px double black;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	padding: 5px 5px 5px 5px;
+	background-color: RGB(127, 127, 127);
+}
+
+.remonter_en_haut:hover
+{
+	width: 80px;
+	border-left: 3px double red;
 }
 
