@@ -14,7 +14,7 @@
 				<div id = "titre_principal">
 
 					<div id = "logo">
-						<img src = "../resources/logo_andreacchio.png" />
+						<a href = "../logo_full_screen.html"><img src = "../resources/logo_andreacchio.png" /></a>
 						<h1>Pierre Andreacchio</h1>
 					</div>
 
@@ -24,11 +24,7 @@
 
 					<ul>
 						<li><a href = "../index.html">Accueil</a></li>
-						<li><a href = "#">Maçonnerie</a></li>
-						<li><a href = "#">Chape</a></li>
-						<li><a href = "#">Carrelage</a></li>
-						<li><a href = "#">Rénovation</a></li>
-						<li><a href = "#">Dallage</a></li>	
+						<li><a href = "#">Photos</a></li>
 						<li><a href = "http://www.ent-andreacchio.890m.com/op_interface.php">Op_Interface</a></li>							
 					</ul>
 

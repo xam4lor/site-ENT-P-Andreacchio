@@ -108,6 +108,47 @@ nav a:hover
 }
 
 
+.nav span
+{
+	visibility: hidden;
+	position: absolute;
+}
+
+.nav a:hover + span
+{
+	visibility: visible;
+}
+
+.nav ul
+{
+	list-style-type: none;
+	display: flex;
+	float: right;
+}
+
+.nav li
+{
+	margin-right: 45px;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: monospace;
+}
+
+.nav a
+{
+	font-size: 1.3em;
+	color: #181818;
+	padding-top: 3px;
+	text-decoration: none;
+}
+
+.nav a:hover
+{
+	border-bottom: 3px double red;
+	font-size: 18pt;
+}
+
+
 
 /*INFORMATIONS*/
 
@@ -120,11 +161,11 @@ nav a:hover
 	width: 20%;
 	padding-left: 15px;
 	padding-right: 20px;
-	margin-right: 54%;
-	float: right;
+	margin-right: auto;
+	margin-left: auto;
 	font-size: 10pt;
 	font-family: cursive;
-	margin-top: -50px;
+	margin-top: -160px;
 	position: relative;
 }
 
@@ -170,6 +211,7 @@ nav a:hover
 	margin-bottom: -150px;
 	border-top: 3px solid black;
 }
+
 
 
 /*FOOTER*/
