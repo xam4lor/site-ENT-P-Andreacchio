@@ -1,3 +1,10 @@
+<?php
+	if($_COOKIE['pseudo'] == null || $_COOKIE['password'] == null) {
+		setcookie('pseudo', '', time() + 365 * 24 * 3600, null, null, false, true);
+		setcookie('password', '', time() + 365 * 24 * 3600, null, null, false, true);
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -37,17 +44,34 @@
 			<center>
 				<?php
 					if(
-						$_GET['suppr_id'] != null 
-						&& $_GET['suppr_id'] != "" 
-						&& $_GET['pseudo'] != null
-						&& $_GET['pseudo'] != ""
-						&& $_GET['psw'] != null
-						&& $_GET['psw'] != ""
-					) {
+						(
+							$_GET['suppr_id'] != null 
+							&& $_GET['suppr_id'] != "" 
+							&& $_GET['pseudo'] != null
+							&& $_GET['pseudo'] != ""
+							&& $_GET['psw'] != null
+							&& $_GET['psw'] != ""
+						)
+						||
+						(
+							$_GET['suppr_id'] != null 
+							&& $_GET['suppr_id'] != "" 
+							&& $_COOKIE['pseudo'] != null
+							&& $_COOKIE['pseudo'] != ''
+							&& $_COOKIE['password'] != null
+							&& $_COOKIE['password'] != ''
+						)
+					)
+					{
 						$suppr_id = $_GET['suppr_id'];
 						$pseudo = $_GET['pseudo'];
 						$psw = $_GET['psw'];
 						$accountExist = false;
+
+						if($_COOKIE['pseudo'] != null && $_COOKIE['pseudo'] != '' && $_COOKIE['password'] != null && $_COOKIE['password'] != '') {
+							$pseudo = $_COOKIE['pseudo'];
+							$psw = $_COOKIE['password'];
+						}
 
 						try {
 							$bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u534058177_syxam;charset=utf8', 'u534058177_xam', 'syxam_hartania', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -88,7 +112,7 @@
 						}
 					}
 
-					else if(null == $_POST['pseudo'] || null == $_POST['psw']) {
+					else if(($_POST['pseudo'] == null || $_POST['psw'] == null) && ($_COOKIE['pseudo'] == null || $_COOKIE['pseudo'] == '' || $_COOKIE['password'] == null || $_COOKIE['password'] == '')) {
 						?>
 
 					<div class="connect">
@@ -114,6 +138,11 @@
 						$pseudo = $_POST['pseudo'];
 						$psw = sha1($_POST['psw']);
 						$accountExist = false;
+
+						if($_COOKIE['pseudo'] != null && $_COOKIE['pseudo'] != '' && $_COOKIE['password'] != null && $_COOKIE['password'] != '') {
+							$pseudo = $_COOKIE['pseudo'];
+							$psw = $_COOKIE['password'];
+						}
 
 						try {
 							$bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u534058177_syxam;charset=utf8', 'u534058177_xam', 'syxam_hartania', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -143,6 +172,9 @@
 							<?php
 						}
 						else {
+							setcookie('pseudo', $pseudo, time() + 365*24*3600, null, null, false, true);
+							setcookie('password', $psw, time() + 365*24*3600, null, null, false, true);
+
 							$req = $bdd->query('SELECT id, date_post, nom, prenom, email, numero_tel, text FROM mails ORDER BY id');
 							$nb = 0;
 							?>
