@@ -16,7 +16,7 @@
 					<div id = "logo">
 						<a href = "../logo_full_screen.html"><img src = "../resources/logo_andreacchio.png" /></a>
 						<div class = "nom_entreprise">
-							<a href = "index.html"><h1>Pierre Andreacchio</h1></a>
+							<a href = "../index.html"><h1>Pierre Andreacchio</h1></a>
 						</div>
 					</div>
 
@@ -86,14 +86,14 @@
 								. "\r\n"
 								. 'Description du mail : ' . "\r\n"
 								. 'Nom de l\'envoyeur : ' . $name . "\r\n"
-								. 'Prénom : ' . $prename . "\r\n"
+								. 'Prenom : ' . $prename . "\r\n"
 								. 'E-mail : ' . $email . "\r\n"
-								. 'Numéro du téléphone : 0' . $tel . "\r\n" 
+								. 'Numero du telephone : 0' . $tel . "\r\n" 
 								. 'Texte : ' . $text . "\r\n"
 								. "\r\n"
 								. "\r\n"
 								. "\r\n"
-								. '                - Système de mails par xam4lor (xam4lor@gmail.com)'
+								. '                - Systeme de mails par xam4lor (xam4lor@gmail.com)'
 							;
 							$headers = 'From: mail@ent-andreacchio.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 							mail($to, $subject, $message, $headers);
