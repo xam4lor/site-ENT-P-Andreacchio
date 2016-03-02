@@ -74,6 +74,19 @@ hr
 	height: 3px;
 }
 
+.nom_entreprise a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.nom_entreprise:hover
+{
+    font-size: 16pt;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
 
 
 /*NAV*/

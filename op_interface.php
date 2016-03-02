@@ -23,7 +23,9 @@
 
 					<div id = "logo">
 						<a href = "logo_full_screen.html"><img src = "resources/logo_andreacchio.png" /></a>
-						<h1>Pierre Andreacchio</h1>
+						<div class = "nom_entreprise">
+							<a href = "index.html"><h1>Pierre Andreacchio</h1></a>
+						</div>
 					</div>
 
 					<h2>Entreprise</h2>
