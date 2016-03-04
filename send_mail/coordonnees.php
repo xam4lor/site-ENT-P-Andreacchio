@@ -69,6 +69,7 @@
 							$email = $_POST['email'];
 							$tel = intval($_POST['numero']);
 							$text = $_POST['text'];
+							$id_inden = sha1($name) . sha1($prename) . rand(0, 999999999);
 
 							try {
 								$bdd = new PDO('mysql:host=mysql.hostinger.fr;dbname=u534058177_syxam;charset=utf8', 'u534058177_xam', 'syxam_hartania', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
@@ -77,13 +78,13 @@
 								die('Erreur : ' . $e->getMessage());
 							}
 							
-							$inser = $bdd->prepare('INSERT INTO mails(date_post, nom, prenom, email, numero_tel, text) VALUES(NOW(), :nom, :prenom, :email, :numero_tel, :text)');
-							$inser->execute(array('nom' => $name, 'prenom' => $prename, 'email' => $email, 'numero_tel' => $tel, 'text' => $text));
+							$inser = $bdd->prepare('INSERT INTO mails(date_post, nom, prenom, email, numero_tel, text, confirm, id_to_confirm) VALUES(NOW(), :nom, :prenom, :email, :numero_tel, :text, :confirm, :id_to_confirm)');
+							$inser->execute(array('nom' => $name, 'prenom' => $prename, 'email' => $email, 'numero_tel' => $tel, 'text' => $text, 'confirm' => 0, 'id_to_confirm' => $id_inden));
 
-							$to = 'xam4lor@gmail.com';
-							$subject = 'Nouveau mail sur le site http://www.ent-andreacchio.890m.com !';
-							$message = '-- Nouveau mail depuis le site \'http://www.ent-andreacchio.890m.com\' --' . "\r\n"
-								. "\r\n"
+							$to = $email;
+							$subject = 'Confirmation de la demande de travaux sur http://www.ent-andreacchio.890m.com !';
+							$message = '-- Confirmation de la demande de travaux depuis le site \'http://www.ent-andreacchio.890m.com\' --' . "\r\n"
+								. '  Rappel du mail :' . "\r\n"
 								. 'Description du mail : ' . "\r\n"
 								. 'Nom de l\'envoyeur : ' . $name . "\r\n"
 								. 'Prenom : ' . $prename . "\r\n"
@@ -91,6 +92,7 @@
 								. 'Numero du telephone : 0' . $tel . "\r\n" 
 								. 'Texte : ' . $text . "\r\n"
 								. "\r\n"
+								. '<a href="http://www.ent-andreacchio.890m.com/send_mail/envoye.php?id_confirm=' . $id_inden . '">Cliquez ici</a>' . "\r\n"
 								. "\r\n"
 								. "\r\n"
 								. '                - Systeme de mails par xam4lor (xam4lor@gmail.com)'
