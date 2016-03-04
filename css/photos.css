@@ -1,0 +1,120 @@
+/*GLOBAL*/
+
+*
+{
+	background-color: silver;
+}
+
+*:hover
+{
+    cursor: url('../resources/cursor.cur'), pointer;
+}
+
+
+/*HEADER*/
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 80px;
+    height: 60px;
+}
+
+#logo img:hover
+{
+    width: 160px;
+    height: 110px;
+}
+
+header
+{
+	border-bottom: solid #000 2px;
+}
+
+header h1
+{
+    font-family: Impact;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 20px;
+}
+
+header h2
+{
+    font-family: Georgia;
+    font-size: 1.5em;
+    margin-top: 5px;
+    font-weight: bold;
+    color : RGB(70,70,70);
+}
+
+hr
+{
+	width : 90%;
+	color : white;
+	height: 3px;
+}
+
+.nom_entreprise a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.nom_entreprise:hover
+{
+    font-size: 16pt;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+
+/*NAV*/
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-family: Georgia;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    border-bottom: 3px solid #760001;
+    font-size: 18pt;
+}
