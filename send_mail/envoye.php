@@ -25,12 +25,8 @@
 
 					<ul>
 						<li><a href = "../index.html">Accueil</a></li>
-						<li><a href = "#">Maçonnerie</a></li>
-						<li><a href = "#">Chape</a></li>
-						<li><a href = "#">Carrelage</a></li>
-						<li><a href = "#">Rénovation</a></li>
-						<li><a href = "#">Dallage</a></li>	
-						<li><a href = "http://www.ent-andreacchio.890m.com/op_interface.php">Op_Interface</a></li>							
+						<li><a href = "../photos.html">Photos</a></li>
+						<li><a href = "http://www.ent-andreacchio.890m.com/op_interface.php">Op-interface</a></li>							
 					</ul>
 
 				</nav>
