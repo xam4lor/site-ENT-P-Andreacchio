@@ -137,3 +137,23 @@ nav a:hover
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
+
+
+
+/*PHOTOS*/
+
+#photo_DLP img
+{
+    width: 500px;
+    height: 250px;
+    border: 10px double black;
+    border-radius: 20px;
+}
+
+#photo_DLP img:hover
+{
+    border-radius: 20px;
+    border-color: #760001;
+    width: 800px;
+    height: 400px;
+}
