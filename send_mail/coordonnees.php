@@ -100,7 +100,7 @@
 							$headers = 'From: mail@ent-andreacchio.com' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 							mail($to, $subject, $message, $headers);
 
-							header('Location: envoye.html');
+							header('Location: msg_confirm_send.html');
 						}
 					?>
 				</div>

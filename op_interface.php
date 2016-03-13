@@ -177,15 +177,16 @@
 							setcookie('pseudo', $pseudo, time() + 365*24*3600, null, null, false, true);
 							setcookie('password', $psw, time() + 365*24*3600, null, null, false, true);
 
-							$req = $bdd->query('SELECT id, date_post, nom, prenom, email, numero_tel, text FROM mails ORDER BY id');
+							$req = $bdd->query('SELECT id, date_post, nom, prenom, email, numero_tel, text, confirm FROM mails ORDER BY id');
 							$nb = 0;
 							?>
 						<div class="mails">
 							<h1>Liste des mails :</h1><br />
 							<?php
 							while($donnees = $req->fetch()) {
-								$nb++;
-								?>
+								if($donnees['confirm'] == 1) {
+									$nb++;
+							?>
 							<h3>
 								- <?php echo $donnees['prenom'] ?> 
 								<?php echo strtoupper($donnees['nom']) ?>
@@ -197,6 +198,7 @@
 							</h3>
 
 								<?php
+								}
 							}
 
 							$req->closeCursor();
