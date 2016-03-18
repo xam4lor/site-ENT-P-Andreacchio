@@ -118,3 +118,56 @@ nav a:hover
     border-bottom: 3px solid #760001;
     font-size: 18pt;
 }
+
+
+/*PHOTOS*/
+
+.avant
+{
+	font-size: 12pt;
+	font-family: Georgia;
+	border: 3px solid black;
+	border-radius: 10px;
+	width: 100px;
+	height: 70px;
+	margin-left: -710px;
+	margin-bottom: -70px;
+}
+
+.avant:hover
+{
+	border-color: #760001;
+}
+
+.apres
+{
+	font-size: 12pt;
+	font-family: Georgia;
+	border: 3px solid black;
+	border-radius: 10px;
+	width: 100px;
+	height: 70px;
+	margin-right: -560px;
+	margin-bottom: 30px;
+}
+
+.apres:hover
+{
+	border-color: #760001;
+}
+
+#mur img
+{
+	width: 550px;
+    height: 340px;
+    border: 10px double black;
+    border-radius: 20px;
+    margin-right: 70px;
+}
+
+#mur img:hover
+{
+	border-color: #760001;
+    width: 650px;
+    height: 400px;
+}
